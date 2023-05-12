@@ -18,6 +18,7 @@ public class GameService {
 	@Autowired
 	private GameRepository gameRepository;
 	
+	
 	@Transactional(readOnly = true)
 	public GameDTO findByID(Long id) {
 		Game result = gameRepository.findById(id).get();
